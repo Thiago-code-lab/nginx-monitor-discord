@@ -1,2 +1,3 @@
-# nginx-monitor-discord
-Projeto de monitoramento de site com Nginx no ambiente Linux (WSL), que envia alertas via webhook do Discord em caso de indisponibilidade do serviço.
+# 🚀 Nginx Monitor Discord
+
+Projeto de monitoramento de sites com Nginx em ambiente Linux (WSL) que envia alertas para Discord quando o serviço fica indisponível.
