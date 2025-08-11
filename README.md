@@ -360,22 +360,23 @@ echo -e "\nVerifique se a notificação chegou no Discord!"
 ```
 # 🛠️ Tecnologias Utilizadas
 
-## 🌐 Stack Principal
+### 🌐 Stack Principal
+[![Nginx](https://img.shields.io/badge/-Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org)
+[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-[![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org)
-[![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
-[![Discord Webhooks](https://img.shields.io/badge/Discord_Webhooks-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
+### ⚙️ Infraestrutura
+[![WSL](https://img.shields.io/badge/-WSL-4D4D4D?style=for-the-badge&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows/wsl/)
+[![Ubuntu](https://img.shields.io/badge/-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com)
+[![Cron](https://img.shields.io/badge/-Cron-5C5C5C?style=for-the-badge&logo=linux&logoColor=white)](https://man7.org/linux/man-pages/man5/crontab.5.html)
 
-## ⚙️ Infraestrutura
+### 🔧 Ferramentas de Desenvolvimento
+[![Bash](https://img.shields.io/badge/-Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![Shell Script](https://img.shields.io/badge/-Shell_Script-5391FE?style=for-the-badge&logo=shell&logoColor=white)](https://www.shellscript.sh)
+[![cURL](https://img.shields.io/badge/-cURL-073551?style=for-the-badge&logo=curl&logoColor=white)](https://curl.se)
 
-[![WSL](https://img.shields.io/badge/WSL-4D4D4D?style=for-the-badge&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows/wsl/)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com)
-[![Cron](https://img.shields.io/badge/Cron-5C5C5C?style=for-the-badge&logo=linux&logoColor=white)](https://man7.org/linux/man-pages/man5/crontab.5.html)
-
-## 📚 Linguagens & Ferramentas
-
-[![Shell Script](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.shellscript.sh)
-[![cURL](https://img.shields.io/badge/cURL-073551?style=for-the-badge&logo=curl&logoColor=white)](https://curl.se)
-[![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)](https://www.markdownguide.org)
+### 🤖 Integrações
+[![Discord Webhooks](https://img.shields.io/badge/-Discord_Webhooks-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
+[![Markdown](https://img.shields.io/badge/-Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)](https://www.markdownguide.org)
 
 ---
