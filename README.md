@@ -72,15 +72,182 @@ Configuração da Página HTML
 
 ```bash
 sudo tee /var/www/html/index.html <<'EOF'
+#sudo nano /var/www/html/index.html
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Meu Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site pessoal profissional rodando em Nginx no WSL">
+    <title>Portfolio Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --primary-light: #5a9cff;
+            --primary-dark: #2667cc;
+            --dark: #1a1a2e;
+            --darker: #0f3460;  /* Azul mais escuro similar à imagem */
+            --light: #16213e;    /* Azul escuro para fundo */
+            --lighter: #ffffff;
+            --success: #2ecc71;
+            --text: #f0f0f0;     /* Texto claro para contraste */
+            --text-light: #c9d1d9; /* Texto secundário claro */
+            --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            background-image: linear-gradient(135deg, #0f3460 0%, #16213e 100%);  /* Gradiente azul escuro */
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 2rem;
+            padding: 3rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+        
+        h1 {
+            color: var(--primary-light);
+            margin-bottom: 1.75rem;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+        
+        p {
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background-color: rgba(46, 204, 113, 0.2);
+            color: var(--success);
+            border-radius: 9999px;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+            transition: var(--transition);
+            cursor: default;
+        }
+        
+        .status:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+        }
+        
+        .status i {
+            font-size: 1rem;
+        }
+        
+        .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            filter: drop-shadow(0 4px 8px rgba(58, 134, 255, 0.4));
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .tech-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: var(--transition);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)) brightness(1.1);
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 4px 8px rgba(58, 134, 255, 0.5)) brightness(1.2);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+                backdrop-filter: blur(8px);
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            p {
+                font-size: 1.1rem;
+            }
+            
+            .tech-icons {
+                gap: 1rem;
+            }
+            
+            .tech-icon {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1 style="text-align:center; color:green;">Meu site está online!</h1>
-<p style="text-align:center;">Servidor Nginx rodando no WSL</p>
+    <div class="container animate__animated animate__fadeIn">
+        <div class="emoji animate-float">🚀</div>
+        <h1>Projeto Linux - DevSecOps</h1>
+        <p>Ambiente Ubuntu no WSL executando Nginx de alto desempenho com monitoramento contínuo e integração via webhook para envio automático de alertas em tempo real, garantindo alta disponibilidade e rápida detecção de falhas em aplicações web.</p>
+        
+        <div class="tech-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" class="tech-icon" title="Nginx" alt="Nginx">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="tech-icon" title="Linux" alt="Linux">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" class="tech-icon" title="Ubuntu" alt="Ubuntu">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-icon" title="HTML5" alt="HTML5">
+        </div>
+        
+        <div class="status animate__animated animate__pulse animate__infinite">
+            <i class="fas fa-circle"></i>
+            Status: Operacional
+        </div>
+    </div>
+
+    <!-- Script para o ícone de círculo no status -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
 EOF
