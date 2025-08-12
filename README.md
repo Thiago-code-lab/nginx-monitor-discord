@@ -329,6 +329,51 @@ Execute o seguinte comando para configurar a verificação minuto a minuto:
 │ └───────── Hora (0-23)
 └─────────── Minuto (0-59)
 ```
+## 🔄 Configurando o Reinício Automático do Nginx no Ubuntu (WSL) usando systemd
+
+Para garantir que o serviço do Nginx seja reiniciado automaticamente em caso de falha, siga estes passos:
+
+### 1. Editar o arquivo de serviço do Nginx
+
+```bash
+sudo nano /lib/systemd/system/nginx.service
+```
+### 2. Configurar parâmetros de reinício
+
+Na seção [Service], adicione ou ajuste as seguintes diretivas:
+
+```bash 
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'
+ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+ExecReload=/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload
+ExecStop=/bin/kill -s TERM $MAINPID
+
+Restart=always
+RestartSec=90
+```
+Explicação das diretivas:
+
+Restart=always → Reinicia o serviço automaticamente em qualquer falha ou término
+
+RestartSec=90 → Aguarda 90 segundos antes de tentar reiniciar
+
+### 3. Aplicar as alterações:
+```bash
+# Recarregar configurações do systemd
+sudo systemctl daemon-reload
+
+# Reiniciar o serviço Nginx
+sudo systemctl restart nginx
+```
+### 4. Verificar o status: 
+```bash
+sudo systemctl status nginx
+```
+
+Aplicar as alterações:
 # 🧪 Como Testar o Monitoramento
 
 ## 🔍 Testes Básicos
