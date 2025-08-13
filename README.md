@@ -87,12 +87,12 @@ sudo tee /var/www/html/index.html <<'EOF'
             --primary-light: #5a9cff;
             --primary-dark: #2667cc;
             --dark: #1a1a2e;
-            --darker: #0f3460;  /* Azul mais escuro similar à imagem */
-            --light: #16213e;    /* Azul escuro para fundo */
+            --darker: #0f3460;  
+            --light: #16213e;   
             --lighter: #ffffff;
             --success: #2ecc71;
-            --text: #f0f0f0;     /* Texto claro para contraste */
-            --text-light: #c9d1d9; /* Texto secundário claro */
+            --text: #f0f0f0;     
+            --text-light: #c9d1d9; 
             --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             --transition: all 0.3s ease-in-out;
         }
@@ -103,7 +103,7 @@ sudo tee /var/www/html/index.html <<'EOF'
             margin: 0;
             padding: 0;
             background-color: var(--light);
-            background-image: linear-gradient(135deg, #0f3460 0%, #16213e 100%);  /* Gradiente azul escuro */
+            background-image: linear-gradient(135deg, #0f3460 0%, #16213e 100%);  
             color: var(--text);
             min-height: 100vh;
             display: flex;
