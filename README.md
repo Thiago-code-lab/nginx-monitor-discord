@@ -766,4 +766,3 @@ Este projeto demonstra os **4 Pilares do SRE**:
 
 ### ⭐ **Se este projeto foi útil, considere dar uma estrela!** ⭐
 
-![Nginx](https://img.shields.io/badge/
