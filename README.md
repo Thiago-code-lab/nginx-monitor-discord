@@ -1,7 +1,7 @@
 <img width="800" height="200" alt="Image" src="https://github.com/user-attachments/assets/bc251934-6e76-47f8-99ef-af6788691611" />
 <div align="center">
     
-# 🔔 Nginx Monitor Discord!
+# 🔔 Nginx Monitor Discord
 
 
 <div align="center">
